@@ -113,7 +113,7 @@ public class ResourceCentreTest {
 				
 		//Given an empty list, after adding 2 items, test if the size of the list is 2
 		ResourceCentre.addChromebook(chromebookList, cb1);
-		ResourceCentre.addChromebook(chromebookList, cc2);
+		ResourceCentre.addChromebook(chromebookList, cb2);
 		assertEquals("Test if that Camcorder arraylist size is 2?", 2, camcorderList.size());
 		
 		//test if the expected output string same as the list of camcorders retrieved from the SourceCentre
@@ -221,7 +221,7 @@ public class ResourceCentreTest {
 		assertFalse("Test if available camcorder CC0011 is returned -false?", isReturned);		
 		//normal
 		ResourceCentre.addChromebook(chromebookList, cb2);
-		cc2.setIsAvailable(false);
+		cb2.setIsAvailable(false);
 		isReturned = ResourceCentre.doReturnChromebook(chromebookList, "CC0012");
 		assertTrue("Test if loaned out amcorder CC0012 is returned- true", isReturned);
 		//error
